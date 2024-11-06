@@ -1,0 +1,63 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false,
+        "clear": false
+    },
+    "inputs":[        
+        {
+            "id": "project_name",
+            "type": "command",
+            "command": "ci-tool.pick-project",
+        },
+     ],
+    "tasks": [        
+        {
+            "label": "clean",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "clean",
+            ],
+            "problemMatcher": ["$gcc"],
+            "group": "build",
+            "options": {
+                     "cwd": "${workspaceRoot}/projects/${config:ci-tool.activated_project}/project_file",
+                "env": {
+                    "PATH": "${workspaceFolder}/tools/build-tools/bin;${config:ci-tool.COMPILER_PATH}",
+                    "PROJECT_NAME": "${config:ci-tool.activated_project}"
+                }
+            },
+        },
+        {
+            "label": "compile",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "-j${config:ci-tool.make_thread_number}",
+                "--output-sync=recurse",
+            ],
+            "problemMatcher": ["$gcc"],
+            "group": "build",
+            "options": {
+                "cwd": "${workspaceRoot}/projects/${config:ci-tool.activated_project}/project_file",
+                "env": {
+                    "PATH": "${workspaceFolder}/tools/build-tools/bin;${config:ci-tool.COMPILER_PATH}",
+                    "PROJECT_NAME": "${config:ci-tool.activated_project}"
+                }
+            },
+            // "dependsOn": "configure",
+        },
+        {
+            "label": "stop openocd",
+            "type": "shell",
+            "command": "taskkill /F  /T /IM openocd.exe",
+        },        
+    ]
+}

@@ -1,0 +1,6 @@
+{
+    "ci-tool.flag": "chipintelli-project",
+    "ci-tool.activated_project": "offline_asr_sample",
+    "ci-tool.make_thread_number": "10",
+    // "ci-tool.make_thread_number": "1",
+}

@@ -1,0 +1,8 @@
+# 目录名称
+Name: "outside_codec"
+
+Src:
+    - es8388.c
+
+Inc:
+    - es8388.h

@@ -1,0 +1,12 @@
+Name: "flacdec"
+
+
+Inc:
+    - bitstreamf.h
+    - flacdecoder.h
+    - golomb.h
+
+Src:
+    - tables.c
+    - flacdecoder.c
+    - bitstreamf.c

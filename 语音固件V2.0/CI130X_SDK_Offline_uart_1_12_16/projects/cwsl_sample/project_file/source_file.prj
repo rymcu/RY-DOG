@@ -1,0 +1,195 @@
+//source files.
+source-file: startup/ci130x_init.c
+source-file: startup/ci130x_vtable.S
+source-file: startup/ci130x_startup.S
+
+source-file: system/ci130x_it.c
+source-file: system/ci130x_system.c
+source-file: system/platform_config.c
+source-file: system/ci130x_handlers.c
+source-file: system/baudrate_calibrate.c
+
+source-file: components/assist/debug_time_consuming.c
+
+source-file: components/freertos/croutine.c
+source-file: components/freertos/event_groups.c
+source-file: components/freertos/list.c
+source-file: components/freertos/queue.c
+source-file: components/freertos/stream_buffer.c
+source-file: components/freertos/tasks.c
+source-file: components/freertos/timers.c
+//source-file: components/freertos/portable/MemMang/heap_3.c
+source-file: components/freertos/portable/MemMang/heap_4.c
+
+source-file: components/log/ci_log.c
+
+source-file: components/assist/cli/FreeRTOS_CLI.c
+source-file: components/assist/cli/UARTCommandConsole.c
+source-file: components/assist/cli/port/serial.c
+source-file: components/assist/cli/port/Sample_CLI_commands.c
+
+source-file: components/flash_control/flash_control_src/ci_flash_data_info.c
+source-file: components/flash_control/flash_control_src/flash_control_inner_port.c
+
+source-file: components/player/audio_play/audio_play_api.c
+source-file: components/player/audio_play/audio_play_decoder.c
+source-file: components/player/audio_play/audio_play_process.c
+source-file: components/player/audio_play/audio_play_os_port.c
+source-file: components/player/audio_play/audio_play_device.c
+source-file: components/player/audio_play/get_play_data.c
+
+source-file: components/player/adpcm/adpcmdec.c
+source-file: components/player/adpcm/adpcm.c
+
+source-file: components/player/m4a/parse_m4a_atom_containers_port.c
+source-file: components/player/m4a/parse_m4a_atom_containers.c
+
+source-file: components/player/flacdec/bitstreamf.c
+source-file: components/player/flacdec/flacdecoder.c
+source-file: components/player/flacdec/tables.c
+
+//source-file: components/player/sonic/sonic.c
+
+
+source-file: components/status_share/status_share.c
+
+source-file: components/ci_nvdm/ci_nvdata_manage.c
+source-file: components/ci_nvdm/ci_nvdata_port.c
+
+source-file: components/cmd_info/command_file_reader.c
+source-file: components/cmd_info/command_info.c
+source-file: components/cmd_info/prompt_player.c
+
+//source-file: components/audio_in_manage/iis_master_rx.c
+//source-file: components/audio_in_manage/iis_slave.c
+//source-file: components/audio_in_manage/audio_in_manage.c
+source-file: components/audio_in_manage/audio_in_manage_inner.c
+
+
+source-file: components/asr/asr_malloc_port.c
+source-file: components/asr/asr_process_callback_decoder.c
+source-file: components/asr/asr_process_callback.c
+source-file: components/codec_manager/codec_manager.c
+source-file: components/codec_manager/codec_manage_inner_port.c
+
+source-file: components/msg_com/voice_module_uart_protocol_g1.c
+source-file: components/msg_com/i2c_protocol_module.c
+source-file: components/msg_com/voice_module_uart_protocol.c
+
+source-file: components/led/color_light_control.c
+source-file: components/led/led_light_control.c
+
+//source-file: components/example/iic_test.c
+
+source-file: components/audio_pre_rslt_iis_out/ci130x_audio_pre_rslt_out.c
+
+source-file: driver/ci130x_chip_driver/src/ci130x_core_eclic.c 
+source-file: driver/ci130x_chip_driver/src/ci130x_core_timer.c
+source-file: driver/ci130x_chip_driver/src/ci130x_dma.c
+source-file: driver/ci130x_chip_driver/src/ci130x_codec.c
+source-file: driver/ci130x_chip_driver/src/ci130x_pdm.c
+source-file: driver/ci130x_chip_driver/src/ci130x_alc.c
+source-file: driver/ci130x_chip_driver/src/ci130x_iisdma.c
+source-file: driver/ci130x_chip_driver/src/ci130x_core_misc.c
+source-file: driver/ci130x_chip_driver/src/ci130x_iis.c
+source-file: driver/ci130x_chip_driver/src/ci130x_adc.c
+source-file: driver/ci130x_chip_driver/src/ci130x_gpio.c
+source-file: driver/ci130x_chip_driver/src/ci130x_iic.c
+source-file: driver/ci130x_chip_driver/src/ci130x_pwm.c
+source-file: driver/ci130x_chip_driver/src/ci130x_timer.c
+source-file: driver/ci130x_chip_driver/src/ci130x_uart.c
+//source-file: driver/ci130x_chip_driver/src/ci130x_inner_codec.c
+source-file: driver/ci130x_chip_driver/src/ci130x_lowpower.c
+source-file: driver/ci130x_chip_driver/src/ci130x_iwdg.c
+source-file: driver/ci130x_chip_driver/src/ci130x_spiflash.c
+source-file: driver/ci130x_chip_driver/src/ci130x_dtrflash.c
+
+source-file: driver/boards/board.c
+source-file: driver/boards/board_default.c
+
+source-file: utils/dichotomy_find.c
+source-file: utils/crc.c
+
+source-file: projects/cwsl_sample/src/main.c
+source-file: projects/cwsl_sample/src/system_hook.c
+source-file: projects/cwsl_sample/src/system_msg_deal.c
+source-file: projects/cwsl_sample/src/user_msg_deal.c
+source-file: projects/cwsl_sample/src/ci_ssp_config.c
+source-file: projects/cwsl_sample/src/cwsl_app_sample1.c
+source-file: projects/cwsl_sample/src/user_control.c
+
+library-file: $(LIBS_PATH)/libasr.a 
+library-file: $(LIBS_PATH)/libnewlib_port.a 
+library-file: $(LIBS_PATH)/libfreertos_port.a
+library-file: $(LIBS_PATH)/libdsu.a
+
+library-file: $(LIBS_PATH)/libflash_encrypt.a
+library-file: $(LIBS_PATH)/libcwsl.a
+
+
+//header file path.
+include-path: driver/ci130x_chip_driver/inc
+include-path: driver/boards
+include-path: driver/third_device_driver/outside_codec
+include-path: system
+include-path: components/log
+include-path: components/assist
+include-path: components/assist/cli
+include-path: components/assist/cli/port
+include-path: components/freertos/include
+include-path: components/freertos/portable/GCC/N307
+include-path: components
+include-path: components/asr
+include-path: components/asr/asr_top
+include-path: components/asr/asr_top/asr_top_inc
+include-path: components/asr/decoder/decoder_inc
+include-path: components/asr/vad_fe
+include-path: components/asr/vad_fe/vad_fe_inc
+include-path: components/asr/dnn
+include-path: components/asr/dnn/dnn_inc
+include-path: components/asr/cinn/cinn_inc
+include-path: components/asr/npu/npu_inc
+include-path: components/asr/nn_and_flash
+include-path: components/asr/nn_and_flash/nn_and_flash_inc
+include-path: components/fft
+include-path: components/msg_com
+include-path: components/led
+include-path: components/player/audio_play
+include-path: components/player/mp3lib/mp3pub
+include-path: components/player/aaclib/aacpub
+include-path: components/player/flacdec
+include-path: components/player/m4a
+include-path: components/player/adpcm
+include-path: components/status_share
+include-path: components/flash_control/flash_control_inc
+include-path: components/flash_encrypt
+include-path: components/codec_manager
+include-path: components/ci_nvdm
+include-path: components/cmd_info
+include-path: components/sys_monitor
+include-path: components/ota
+include-path: components/audio_pre_rslt_iis_out
+include-path: components/audio_in_manage
+include-path: components/assist/SEGGER
+include-path: components/assist/SEGGER/config
+include-path: components/nuclear_com
+include-path: components/audio_pre_rslt_iis_out
+include-path: components/ci_cwsl
+include-path: projects/cwsl_sample/src
+include-path: utils
+
+include-path: components/alg
+include-path: components/alg/denoise
+include-path: components/alg/alc_auto_switch
+include-path: components/alg/basic_alg
+include-path: components/alg/aec
+include-path: components/alg/beamforming
+include-path: components/alg/dereverb
+include-path: components/alg/doa
+
+
+
+
+
+
+

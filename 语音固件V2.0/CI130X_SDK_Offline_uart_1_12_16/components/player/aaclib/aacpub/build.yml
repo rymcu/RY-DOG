@@ -1,0 +1,7 @@
+Name: "aacpub"
+
+
+Inc:
+    - aaccommon.h
+    - aacdec.h
+    - aacstatname.h

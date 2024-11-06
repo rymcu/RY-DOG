@@ -1,0 +1,10 @@
+Name: "m4a"
+
+
+Inc:
+    - parse_m4a_atom_containers_port.h
+    - parse_m4a_atom_containers.h
+
+Src:
+    - parse_m4a_atom_containers_port.c
+    - parse_m4a_atom_containers.c
