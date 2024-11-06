@@ -1,0 +1,27 @@
+{
+    "idf.adapterTargetName": "esp32s3",
+    "idf.openOcdConfigs": [
+        "interface/ftdi/esp32_devkitj_v1.cfg",
+        "target/esp32s3.cfg"
+    ],
+    "idf.portWin": "COM7",
+    "idf.flashType": "UART",
+    "files.associations": {
+        "nimconfig.h": "c",
+        "ry_ble.h": "c",
+        "nimbledevice.h": "c",
+        "*.tcc": "cpp",
+        "fstream": "cpp",
+        "string_view": "cpp",
+        "algorithm": "cpp",
+        "exception": "cpp",
+        "iosfwd": "cpp",
+        "new": "cpp",
+        "ostream": "cpp",
+        "sstream": "cpp",
+        "streambuf": "cpp",
+        "random": "cpp",
+        "functional": "cpp",
+        "type_traits": "cpp"
+    }
+}
