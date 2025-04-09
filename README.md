@@ -49,3 +49,9 @@ graph TB
 ![](images/语音固件下载工具.png)
 ## ESP32固件下载
 通过板载USB type-C接口进行固件更新，第一次下载可能会出现USB串口识别异常，只需先按住BOOT按键不放，在按一下RST按键，让ESP32进入下载模式即可。
+
+## 授权协议
+- 个人授权
+  - 遵循 [AGPLv3 协议](https://www.gnu.org/licenses/agpl-3.0.en.html)
+- 商业授权
+  - 商业使用请联系 [RYMCU 官方](mailto:hugh@rymcu.com) 获取授权 
